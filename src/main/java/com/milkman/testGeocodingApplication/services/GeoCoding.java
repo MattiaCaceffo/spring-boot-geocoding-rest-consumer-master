@@ -1,9 +1,10 @@
-package org.nil;
+package com.milkman.testGeocodingApplication.services;
 
 import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.milkman.testGeocodingApplication.models.GeoCodingResult;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class GeoCoding {

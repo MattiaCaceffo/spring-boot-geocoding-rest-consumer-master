@@ -1,4 +1,4 @@
-package org.nil;
+package com.milkman.testGeocodingApplication.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
