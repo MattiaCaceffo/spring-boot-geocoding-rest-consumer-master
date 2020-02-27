@@ -10,7 +10,7 @@ public class Directions {
 	String status;
 	
 	@JsonProperty(value="routes")
-	DirectionsResult[] directionsResults;
+	Routes[] routes;
 
 	public String getStatus() {
 		return status;
@@ -20,16 +20,16 @@ public class Directions {
 		this.status = status;
 	}
 
-	public DirectionsResult[] getDirectionsResults() {
-		return directionsResults;
+	public Routes[] getRoutes() {
+		return routes;
 	}
 
-	public void setDirectionsResults(DirectionsResult[] directionsResults) {
-		this.directionsResults = directionsResults;
+	public void setRoutes(Routes[] routes) {
+		this.routes = routes;
 	}
 
 	@Override
 	public String toString() {
-		return "Directions [status=" + status + ", directionsResults=" + Arrays.toString(directionsResults) + "]";
+		return "Directions [status=" + status + ", directionsResults=" + Arrays.toString(routes) + "]";
 	}
 }

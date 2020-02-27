@@ -10,7 +10,7 @@ public class GeoCoding {
 	String status;
 	
 	@JsonProperty(value="results")
-	DirectionsResult[] geoCodingResults;
+	GeoCodingResult[] geoCodingResults;
 
 	public String getStatus() {
 		return status;
@@ -20,11 +20,11 @@ public class GeoCoding {
 		this.status = status;
 	}
 
-	public DirectionsResult[] getGeoCodingResults() {
+	public GeoCodingResult[] getGeoCodingResults() {
 		return geoCodingResults;
 	}
 
-	public void setGeoCodingResults(DirectionsResult[] geoCodingResults) {
+	public void setGeoCodingResults(GeoCodingResult[] geoCodingResults) {
 		this.geoCodingResults = geoCodingResults;
 	}
 
