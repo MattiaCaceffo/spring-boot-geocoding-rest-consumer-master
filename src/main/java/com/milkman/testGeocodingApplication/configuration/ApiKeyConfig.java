@@ -10,8 +10,10 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @PropertySource("classpath:apikey.properties")
 public class ApiKeyConfig {
 	
-	@Value("${apiKey}")
-	private String apiKey;
+	@Value("${apiKeyGeocoding}")
+	private String apiKeyGeocoding;
+	@Value("${apiKeyDirections}")
+	private String apiKeyDirect;
 	
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer getPropertyConfig() {

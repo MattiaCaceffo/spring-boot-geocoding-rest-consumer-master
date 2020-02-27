@@ -1,17 +1,16 @@
-package com.milkman.testGeocodingApplication.services;
+package com.milkman.testGeocodingApplication.models;
 
 import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.milkman.testGeocodingApplication.models.GeoCodingResult;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class GeoCoding {
 	String status;
 	
 	@JsonProperty(value="results")
-	GeoCodingResult[] geoCodingResults;
+	DirectionsResult[] geoCodingResults;
 
 	public String getStatus() {
 		return status;
@@ -21,11 +20,11 @@ public class GeoCoding {
 		this.status = status;
 	}
 
-	public GeoCodingResult[] getGeoCodingResults() {
+	public DirectionsResult[] getGeoCodingResults() {
 		return geoCodingResults;
 	}
 
-	public void setGeoCodingResults(GeoCodingResult[] geoCodingResults) {
+	public void setGeoCodingResults(DirectionsResult[] geoCodingResults) {
 		this.geoCodingResults = geoCodingResults;
 	}
 
