@@ -8,6 +8,9 @@ public class GeoCodingResult {
     @JsonProperty(value = "formatted_address")
     String formattedAddress;
 
+    @JsonProperty(value = "geometry")
+    Geometry geometry;
+
     @JsonProperty("place_id")
     String placeId;
 
