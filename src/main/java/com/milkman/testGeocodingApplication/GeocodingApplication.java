@@ -35,7 +35,7 @@ public class GeocodingApplication {
 		return args -> {
 			System.out.println("-----> " + env.getProperty("apiKey"));
 			GeoCoding geoCoding = restTemplate.getForObject(
-					"https://maps.googleapis.com/maps/api/geocode/json?address=via roma 12 37139 verona&key=AIzaSyDBU8xCVPqWV4vPasIBKfZhT6VV7K26sEU", GeoCoding.class);
+					"https://maps.googleapis.com/maps/api/geocode/json?address=via roma 12 37139 verona&key=AIzaSyCEHvPwo2BLLzjaJ-YPkLm2syxIy_DSqas", GeoCoding.class);
 			log.info(geoCoding.toString());
 		};
 	}*/
