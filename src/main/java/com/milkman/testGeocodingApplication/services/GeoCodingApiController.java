@@ -29,15 +29,18 @@ public class GeoCodingApiController {
 	@Value("${apiKeyDirections}")
 	private String apiKeyDirect;
 
+	private String url = "";
+
 	@RequestMapping("/getGeoCoding")
 	public GeoCoding getGeoCodingForLoc(@RequestParam(value = "address", defaultValue="Via Germania 11, 37136 Verona VR") String address) {
 		RestTemplate restTemplate = new RestTemplate();
 		UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(GEOCODING_URI).queryParam("address", address)
 				.queryParam("key", apiKeyGeocoding);
-			
-		log.info("Calling geocoding api with: " + builder.toUriString());
+
+		url = GEOCODING_URI + "?address=" + address + "&key=" + apiKeyGeocoding;
+		log.info("Calling geocoding api with: " + url);
 		
-		GeoCoding geoCoding = restTemplate.getForObject(builder.toUriString(), GeoCoding.class);
+		GeoCoding geoCoding = restTemplate.getForObject(url, GeoCoding.class);
 		log.info(geoCoding.toString());
 
 		return geoCoding;
