@@ -30,6 +30,14 @@ public class GeoCodingResult {
         this.placeId = placeId;
     }
 
+    public Geometry getGeometry() {
+        return geometry;
+    }
+
+    public void setGeometry(Geometry geometry) {
+        this.geometry = geometry;
+    }
+
     @Override
     public String toString() {
         return "GeoCodingResult [formattedAddress=" + formattedAddress + ", placeId=" + placeId + "]";

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Legs {
+
     @JsonProperty(value = "end_location")
     End_location end_location;
 
